@@ -4,10 +4,9 @@ import { Button, AppBar } from "@mui/material";
 import ChipInput from "material-ui-chip-input";
 import { withStyles } from "@material-ui/core/styles";
 
-const Search = ({ tags, setTags }) => {
+const Search = ({ tags, setTags,fetchMedicines }) => {
   const handleAdd = (tag) => setTags([...tags, tag]); // adding tag to the tags array
   const handleDelete = (tagToDelete) => setTags(tags.filter((tag) => tag !== tagToDelete)); // deleting tag from the tags array
-  const searchPost = () => {};
 
   const classes = useStyles();
 
@@ -41,7 +40,7 @@ const Search = ({ tags, setTags }) => {
   })(ChipInput);
 
   return (
-    <div className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6 ${classes.appBarSearch} bg-black-gradient-2`}>
+    <div id="main"  className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6 ${classes.appBarSearch} bg-black-gradient-2`}>
       <h1 className="font-poppins font-semibold text-white ss:text-[40px] text-[17px] my-10">Provide us with your Symptoms!</h1>
       <CssTextField
         style={{ margin: "10px 0", input: { color: "red" } }}
@@ -55,7 +54,7 @@ const Search = ({ tags, setTags }) => {
           style: { color: "#fff" },
         }}
       />
-      <Button onClick={searchPost} className={`${classes.searchButton}`} variant="contained" color="primary" fullWidth style={{ marginTop: "20px" }}>
+      <Button onClick={fetchMedicines} className={`${classes.searchButton}`} variant="contained" color="primary" fullWidth style={{ marginTop: "20px" }}>
         Cure Me!
       </Button>
     </div>
