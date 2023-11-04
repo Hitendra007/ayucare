@@ -29,7 +29,9 @@ const Business = () =>  (
       By choosing the right Ayurvedic remedy, you can enhance your overall well-being, promote balance, and experience a healthier life. However, with a multitude of Ayurvedic therapies and treatments available, it's essential to select the one that aligns best with your unique needs and goals.
       </p>
 
+      <a href="#main">
       <Button styles={`mt-10`} />
+      </a>
     </div>
 
     <div className={`${layout.sectionImg} flex-col`}>

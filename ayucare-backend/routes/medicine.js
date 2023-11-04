@@ -1,6 +1,6 @@
 import express from "express";
-import { getMedicines,getPharmacologicalProperties } from "../controllers/medicine";
+import { getMedicines,getPharmacologicalProperties } from "../controllers/medicine.js";
 const router = express.Router()
 router.get("/properties",getPharmacologicalProperties)
-router.get('/',getMedicines)
+router.post('/',getMedicines)
 export default router;
