@@ -1,6 +1,7 @@
 # Ayu Care - Your Ayurvedic Companion
 
-![Ayu Care Logo](ayucare\src\assets\logo.png)
+![Ayu Care Logo]![Ayucare (1)](https://github.com/Hitendra007/ayucare/assets/83388898/e546bbda-851f-4758-af5b-67939030f5a5)
+
 
 Ayu Care is a web application designed to simplify the practice of Ayurveda and enhance the learning experience for students. It offers a user-friendly interface that allows you to input symptoms in both common and Ayurvedic terms, generating a list of Ayurvedic medicines to address those symptoms. Moreover, it provides comprehensive information on the pharmacological properties of these medicines.
 
