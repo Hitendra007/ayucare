@@ -47,25 +47,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
+      "Health is your most valuable asset. Ayurveda can guide you towards balance and well-being, but it's your daily choices that steer the course.",
     name: "Herman Jensen",
-    title: "Founder & Leader",
+    title: "Leader in Ayurveda",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+      "Good health makes your life easier. If you're fortunate to have it, you're fortunate. And for Ayurveda, nurturing and maintaining good health is the key to a balanced and harmonious life.",
     name: "Steve Mark",
-    title: "Founder & Leader",
+    title: "Ayurvedic Practitioner",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
+      "Ayurveda practitioners dedicated to their craft can achieve wealth through holistic health and well-being.",
     name: "Kenn Gallagher",
-    title: "Founder & Leader",
+    title: "Ayurveda Researcher",
     img: people03,
   },
 ];
