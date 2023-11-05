@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import * as api from './api'
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Search, Testimonials, Hero } from "./components";
+import { Business, CTA, Footer, Navbar, Search, Testimonials, Hero } from "./components";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Medicines from "./components/Medicines/Medicines";
 const App = () => {
 
   const [tags, setTags] = useState([]);
   const [medicines,setMedicines] = useState([])
-  const [phrama,setPharma] = useState([])
+  const [pharma,setPharma] = useState([])
 
   const fetchMedicines = async ()=>{
     console.log(tags)
 
         const {data} = await api.getMedicines({indications: tags})
         setMedicines(data)
+        console.log(data)
   }
   const fetchPharmacologicalProperties = async (name)=>{
     console.log(name)
         const {data} = await api.getPharmacologicalProperties(name)
         console.log(data)
-        setPharma(data)
+        setPharma(data.properties)
   }
  
 
@@ -35,11 +36,10 @@ const App = () => {
     
     <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
-        <Search tags={tags} setTags={setTags} fetchMedicines={fetchMedicines}/>
+        <Search tags={tags} setTags={setTags} fetchMedicines={fetchMedicines} pharma={pharma} />
         <Business />
         <Testimonials />
         <CTA />
-        <Footer />
       </div>
     </div>
      </>
@@ -58,9 +58,10 @@ const App = () => {
    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Mainpage />} />
-      <Route path = "/medicine" element={<Medicines/>}/>
+      <Route path = "/medicine" element={<Medicines medicines={medicines} fetchPharmacologicalProperties={fetchPharmacologicalProperties} pharma={pharma} setPharma={setPharma} />}/>
     </Routes>
     </BrowserRouter>
+    <Footer />
   </div>
 )};
 

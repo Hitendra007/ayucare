@@ -3,6 +3,7 @@ import styles from "../../style";
 import { Button, AppBar } from "@mui/material";
 import ChipInput from "material-ui-chip-input";
 import { withStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const Search = ({ tags, setTags,fetchMedicines }) => {
   const handleAdd = (tag) => setTags([...tags, tag]); // adding tag to the tags array
@@ -54,9 +55,11 @@ const Search = ({ tags, setTags,fetchMedicines }) => {
           style: { color: "#fff" },
         }}
       />
+      <Link to="/medicine" style={{ textDecoration: 'none' }}>
       <Button onClick={fetchMedicines} className={`${classes.searchButton}`} variant="contained" color="primary" fullWidth style={{ marginTop: "20px" }}>
         Cure Me!
       </Button>
+      </Link>
     </div>
   );
 };
