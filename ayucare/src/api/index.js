@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({baseURL:"https://ayucare-backend.vercel.app/"})
+const API = axios.create({baseURL:"https://ayucare-hitendra007s-projects.vercel.app/"})
 
 
 export const getMedicines = (data)=>  API.post("/medicine", data)

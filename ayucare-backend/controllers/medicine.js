@@ -3,6 +3,7 @@ import PharmaPropModel from "../models/pharmaProp.js";
 
 export const getMedicines = async (req, res) => {
   try {
+    console.log("hi i am here")
       const input = req.body.indications; // Convert input to lowercase
       const docs = await MedicineModel.find({
           $or: [
@@ -12,7 +13,7 @@ export const getMedicines = async (req, res) => {
       }).exec();
 
       // Process the matching documents in the 'docs' array
-      console.log('Matching documents:', docs);
+      // console.log('Matching documents:', docs);
       return res.status(201).json(docs);
   } catch (err) {
       console.error('Error querying the database:', err);
